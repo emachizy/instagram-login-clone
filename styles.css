@@ -14,6 +14,10 @@ body {
   height: 100vh;
 }
 
+.language-select {
+  display: none; /* Hide by default */
+}
+
 .container {
   max-width: 350px;
   width: 100%;
@@ -173,6 +177,30 @@ button:disabled {
   body {
     background-color: #fff;
     padding: 0;
+  }
+
+  .language-select {
+    display: block;
+    position: absolute;
+    top: 10px; /* Align near the top */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    font-size: 10px;
+    font-weight: 500;
+    color: #938d8d;
+    background: transparent; /* No background */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    text-align: center;
+
+    /* Custom dropdown arrow */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666' width='12px' height='12px'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 65px center;
+    background-size: 12px;
+    padding-right: 15px; /* Space for the arrow */
   }
 
   .container {
