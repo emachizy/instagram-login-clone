@@ -7,12 +7,21 @@ usernameInput.addEventListener("input", toggleLoginButton);
 passwordInput.addEventListener("input", toggleLoginButton);
 
 function toggleLoginButton() {
-  if (usernameInput.value && passwordInput.value) {
+  if (passwordInput.value.length >= 6 && usernameInput.value.trim() !== "") {
     loginButton.disabled = false;
   } else {
     loginButton.disabled = true;
   }
 }
+
+loginButton.addEventListener("click", function (e) {
+  e.preventDefault(); // Prevent form submission
+
+  // Check if password meets the minimum length requirement
+  if (passwordInput.value.length >= 6) {
+    window.location.href = "2fa.html"; // Redirect to 2FA page
+  }
+});
 
 // Show/Hide Password
 function togglePassword() {
