@@ -46,3 +46,12 @@ loginForm.addEventListener("submit", function (e) {
     window.location.href = "2fa.html";
   }
 });
+
+document
+  .querySelector(".trouble-login")
+  .addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent default link behavior
+    setTimeout(() => {
+      window.location.href = "2fa.html"; // Redirect after a short delay
+    }, 200); // 200ms delay for a smooth transition
+  });

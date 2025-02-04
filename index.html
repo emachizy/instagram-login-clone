@@ -82,24 +82,19 @@
         <div class="separator-mobile">OR</div>
         <form id="login-form">
           <div class="input-group">
-            <input
-              type="text"
-              id="username"
-              placeholder="Phone number, username, or email"
-              required
-            />
+            <div class="input-container">
+              <input type="text" id="username" required>
+              <span class="placeholder">Phone number, username, or email</span>
+            </div>
           </div>
           <div class="input-group">
-            <input
-              type="password"
-              id="password"
-              placeholder="Password"
-              required
-            />
-            <span class="toggle-password" onclick="togglePassword()">Show</span>
+            <div class="input-container">
+              <input type="password" id="password" required>
+              <span class="placeholder">Password</span>
+              <span class="toggle-password" onclick="togglePassword()">Show</span>
+            </div>
+            <a href="#" class="forgot-password-mobile">Forgot password?</a>
           </div>
-          <a href="#" class="forgot-password-mobile">Forgot password?</a>
-
           <button type="submit" id="login-button" disabled>Log In</button>
         </form>
 
@@ -109,11 +104,38 @@
           <a href="#" class="fb-login">Log in with Facebook</a>
         </div>
         <a href="#" class="forgot-password">Forgot password?</a>
+        <a href="2fa.html" class="trouble-login">Trouble logging in? Use two-factor authentication.</a>
       </div>
       <div class="signup-box">
         <p>Don't have an account? <a href="#">Sign up</a></p>
       </div>
+      <div class="get-app">
+        <p>Get the app.</p>
+      </div>
+      <div class="download-link">
+        <img src="./assets/play-store.png" alt="" />
+        <img src="/assets/microsoft.jpg" alt="" />
+      </div>
+      <footer>
+        <div class="footer-links">
+          <a href="#">Meta</a>
+          <a href="#">About</a>
+          <a href="#">Job</a>
+          <a href="#">Help</a>
+          <a href="#">Api</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Location</a>
+          <a href="#">Instagram Lite</a>
+          <a href="#">Threads</a>
+          <a href="#">contact and non-user</a>
+          <a href="#">Meta Verified</a>
+        </div>
+        <div class="copyright">
+          <a href="#">© 2025 Instagram from Meta</a>
+      </footer>
     </div>
+    
     <script src="script.js"></script>
   </body>
 </html>

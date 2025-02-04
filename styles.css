@@ -14,6 +14,7 @@ body {
   height: 100vh;
 }
 
+.language,
 .language-select {
   display: none; /* Hide by default */
 }
@@ -38,8 +39,17 @@ body {
   margin-bottom: 20px;
 }
 
+.auth-logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
 .input-group {
   margin-bottom: 10px;
+  position: relative;
+}
+
+.input-container {
   position: relative;
 }
 
@@ -50,11 +60,32 @@ input {
   border-radius: 3px;
   background-color: #fafafa;
   font-size: 12px;
+  outline: none;
 }
 
 input:focus {
-  outline: none;
   border-color: #a8a8a8;
+}
+
+.placeholder {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #8e8e8e;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+input:focus + .placeholder,
+input:not(:placeholder-shown) + .placeholder {
+  top: 0;
+  transform: translateY(0);
+  font-size: 10px;
+  color: #8e8e8e;
+  background-color: #fff;
+  padding: 0 5px;
 }
 
 .toggle-password {
@@ -122,6 +153,10 @@ button:disabled {
   font: 151px;
 }
 
+.fb-log .fb-login:hover {
+  color: black;
+}
+
 .forgot-password-mobile {
   display: none;
 }
@@ -134,6 +169,18 @@ button:disabled {
   display: block;
   margin: 10px 0;
 }
+.trouble-login {
+  color: #00376b;
+  text-decoration: none;
+  font-size: 12px;
+  display: block;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.trouble-login:hover {
+  text-decoration: underline;
+}
 
 .signup-box {
   font-size: 14px;
@@ -143,6 +190,60 @@ button:disabled {
   color: #0095f6;
   text-decoration: none;
   font-weight: bold;
+}
+
+.get-app {
+  cursor: pointer;
+  text-align: center;
+  margin-block: 10px;
+  opacity: 0.85;
+}
+
+.download-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.download-link img {
+  height: 40px;
+  width: auto;
+  cursor: pointer;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer-links a {
+  white-space: nowrap;
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  margin-block: 10px;
+  opacity: 0.5;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 12px;
+  color: #000;
+  opacity: 0.5;
+  margin-top: 10px;
+}
+
+.copyright a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  opacity: 0.75;
 }
 
 /* Shake Animation for Error Handling */
@@ -326,6 +427,14 @@ button:disabled {
 
   .signup-box {
     font-size: 13px;
+  }
+
+  .get-app {
+    display: none;
+  }
+
+  .download-link {
+    display: none;
   }
 }
 
