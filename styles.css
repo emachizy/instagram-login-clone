@@ -10,13 +10,13 @@ body {
   background-color: #fafafa;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+
   height: 100vh;
 }
 
 .language,
 .language-select {
-  display: none; /* Hide by default */
+  display: none;
 }
 
 .container {
@@ -42,6 +42,7 @@ body {
 .auth-logo {
   width: 120px;
   margin-bottom: 20px;
+  line-height: 4px;
 }
 
 .input-group {
@@ -289,13 +290,13 @@ button:disabled {
   .language-select {
     display: block;
     position: absolute;
-    top: 10px; /* Align near the top */
+    top: 10px;
     left: 50%;
-    transform: translateX(-50%); /* Center horizontally */
+    transform: translateX(-50%);
     font-size: 10px;
     font-weight: 500;
     color: #938d8d;
-    background: transparent; /* No background */
+    background: transparent;
     border: none;
     outline: none;
     cursor: pointer;
