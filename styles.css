@@ -1,0 +1,295 @@
+/* General Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 350px;
+  width: 100%;
+}
+
+.login-box,
+.signup-box {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 175px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  background-color: #fafafa;
+  font-size: 12px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #a8a8a8;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #0095f6;
+  font-size: 12px;
+}
+
+button {
+  width: 100%;
+  padding: 8px;
+  background-color: #0095f6;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:disabled {
+  background-color: #b2dffc;
+  cursor: not-allowed;
+}
+
+.separator {
+  display: flex;
+  margin: 15px 0;
+  color: black;
+  font-size: 13px;
+  position: relative;
+}
+
+.separator::before,
+.separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #dbdbdb;
+  margin: auto 10px;
+}
+.fb-log {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 16px;
+}
+.fb-log i {
+  color: #0095f6;
+  font-size: 20px;
+}
+.fb-log .fb-login {
+  color: #0095f6;
+  font: 151px;
+}
+.fb-login,
+.forgot-password {
+  color: #385185;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  margin: 10px 0;
+}
+
+.signup-box {
+  font-size: 14px;
+}
+
+.signup-box a {
+  color: #0095f6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Shake Animation for Error Handling */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+/* Media Queries for Responsiveness */
+
+/* General Mobile Adjustments */
+@media (max-width: 768px) {
+  body {
+    background-color: #fff;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .login-box,
+  .signup-box {
+    border: none;
+    background-color: transparent;
+    padding: 15px;
+  }
+
+  .logo {
+    width: 175px;
+    margin-bottom: 10px;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .separator {
+    font-size: 14px;
+  }
+
+  .fb-login,
+  .forgot-password {
+    font-size: 14px;
+  }
+
+  .signup-box {
+    font-size: 14px;
+  }
+}
+
+/* Optimizing for 414px (Large Mobile Devices like iPhone Plus) */
+@media (max-width: 414px) {
+  .logo {
+    width: 160px;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 11px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 9px;
+  }
+
+  .separator {
+    font-size: 13px;
+  }
+
+  .fb-login,
+  .forgot-password {
+    font-size: 13px;
+  }
+
+  .signup-box {
+    font-size: 13px;
+  }
+}
+
+/* Optimizing for 375px (Standard Mobile Devices like iPhone 12/13/14) */
+@media (max-width: 375px) {
+  .logo {
+    width: 140px;
+  }
+
+  input {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .separator {
+    font-size: 12px;
+  }
+
+  .fb-login,
+  .forgot-password {
+    font-size: 12px;
+  }
+
+  .signup-box {
+    font-size: 12px;
+  }
+}
+
+/* Optimizing for 320px (Small Devices like iPhone SE) */
+@media (max-width: 320px) {
+  .logo {
+    width: 120px;
+  }
+
+  input {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 13px;
+    padding: 7px;
+  }
+
+  .separator {
+    font-size: 11px;
+  }
+
+  .fb-login,
+  .forgot-password {
+    font-size: 11px;
+  }
+
+  .signup-box {
+    font-size: 11px;
+  }
+}
