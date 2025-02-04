@@ -198,7 +198,7 @@ button:disabled {
     /* Custom dropdown arrow */
     background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666' width='12px' height='12px'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: right 65px center;
+    background-position: right 4px center;
     background-size: 12px;
     padding-right: 15px; /* Space for the arrow */
   }
