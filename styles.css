@@ -10,13 +10,14 @@ body {
   background-color: #fafafa;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   height: 100vh;
 }
 
 .container {
   max-width: 350px;
   width: 100%;
+  margin-top: 12px;
 }
 
 .login-box,
