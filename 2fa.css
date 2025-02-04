@@ -1,0 +1,103 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fafafa;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Login Box */
+.login-box {
+  background: #fff;
+  padding: 30px;
+  width: 350px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Instagram Logo */
+.auth-logo {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+/* Text */
+p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Input Group */
+.input-group {
+  width: 100%;
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #0095f6;
+}
+
+/* Verify Button */
+#verify-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background: #0095f6;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#verify-button:hover {
+  background: #0077cc;
+}
+
+/* Resend Code */
+.resend-code {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #0095f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.resend-code:hover {
+  text-decoration: underline;
+}
