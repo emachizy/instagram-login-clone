@@ -80,7 +80,9 @@ button:disabled {
   background-color: #b2dffc;
   cursor: not-allowed;
 }
-
+.separator-mobile {
+  display: none;
+}
 .separator {
   display: flex;
   margin: 15px 0;
@@ -95,6 +97,10 @@ button:disabled {
   flex: 1;
   border-bottom: 1px solid #dbdbdb;
   margin: auto 10px;
+}
+
+.fb-log-mobile {
+  display: none;
 }
 .fb-log {
   display: flex;
@@ -111,6 +117,11 @@ button:disabled {
   color: #0095f6;
   font: 151px;
 }
+
+.forgot-password-mobile {
+  display: none;
+}
+
 .fb-login,
 .forgot-password {
   color: #385185;
@@ -221,13 +232,68 @@ button:disabled {
     padding: 9px;
   }
 
-  .separator {
+  /* .separator {
     font-size: 13px;
+  } */
+
+  .separator {
+    display: none;
+  }
+
+  .separator-mobile {
+    display: flex;
+    margin: 15px 0;
+    color: black;
+    font-size: 13px;
+    position: relative;
+  }
+  .separator-mobile::before,
+  .separator-mobile::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #dbdbdb;
+    margin: auto 10px;
+  }
+
+  .fb-log {
+    display: none;
+  }
+
+  .fb-log-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 16px;
+    background-color: #0095f6;
+    border-radius: 8px;
+  }
+  .fb-log-mobile .fb-login {
+    color: #fff;
+    font: 151px;
+  }
+
+  .fb-log-mobile i {
+    color: #fff;
+    font-size: 20px;
   }
 
   .fb-login,
   .forgot-password {
     font-size: 13px;
+  }
+
+  .forgot-password {
+    display: none;
+  }
+
+  .forgot-password-mobile {
+    color: #0095f6;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    justify-content: end;
+    margin: 10px 0;
   }
 
   .signup-box {
