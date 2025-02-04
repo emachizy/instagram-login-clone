@@ -187,7 +187,10 @@ button:disabled {
 
   .language-select {
     display: block;
-
+    position: absolute;
+    top: 10px; /* Align near the top */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
     font-size: 10px;
     font-weight: 500;
     color: #938d8d;
